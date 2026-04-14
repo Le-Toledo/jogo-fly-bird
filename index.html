@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Sky Bird é um jogo arcade em HTML5 inspirado em Flappy Bird, com visual caprichado, pontuação local e controles simples."
+  >
+  <meta name="theme-color" content="#7fd4ff">
+  <title>Sky Bird | Arcade em HTML5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="hero">
+      <p class="eyebrow">Projeto Web Arcade</p>
+      <h1>Sky Bird</h1>
+      <p class="lead">
+        Um jogo leve e pronto para publicar no GitHub: abre direto no navegador, funciona no desktop e no mobile
+        e salva o recorde localmente.
+      </p>
+
+      <div class="hero-cards" aria-label="Informações do projeto">
+        <article class="info-card">
+          <span class="info-label">Stack</span>
+          <strong>HTML, CSS e JavaScript</strong>
+          <p>Sem dependências e sem build.</p>
+        </article>
+        <article class="info-card">
+          <span class="info-label">Controles</span>
+          <strong>Espaço, clique ou toque</strong>
+          <p>Responsivo e fácil de testar.</p>
+        </article>
+      </div>
+
+      <ul class="feature-list" aria-label="Destaques">
+        <li>Pontuação e recorde persistidos no navegador</li>
+        <li>Interface pronta para demonstração e portfólio</li>
+        <li>Loop fluido com canvas 2D</li>
+      </ul>
+    </section>
+
+    <section class="game-column" aria-label="Jogo Sky Bird">
+      <header class="hud">
+        <div class="brand">
+          <span class="brand-kicker">Arcade</span>
+          <h2>Sky Bird</h2>
+        </div>
+
+        <div class="scoreboard" aria-label="Placar">
+          <div class="score-card">
+            <span>Pontos</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="score-card">
+            <span>Recorde</span>
+            <strong id="best-score">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="game-stage">
+        <canvas id="game" width="420" height="720" aria-label="Jogo estilo Flappy Bird"></canvas>
+        <div class="overlay" id="overlay" aria-live="polite">
+          <div class="panel">
+            <p class="panel-kicker">Modo Arcade</p>
+            <h3 id="overlay-title">Clique para voar</h3>
+            <p id="overlay-text">Pressione espaço, clique ou toque para começar.</p>
+            <button id="action-button" type="button">Jogar</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="game-footer">
+        <span>Objetivo: passe pelos canos e faça o maior placar possível.</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
