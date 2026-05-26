@@ -136,9 +136,9 @@ Este projeto é licenciado sob a **MIT License** – veja o arquivo [LICENSE](LI
 
 ## 👨‍💻 Autor
 
-Feito com ❤️ por [Seu Nome](https://github.com/seu-usuario)
+Feito com ❤️ por Leandro Toledo (https://github.com/Le-Toledo)
 
-Visite meu portfólio: [seu-portfolio.com](https://seu-portfolio.com) | LinkedIn: [@seu-linkedin](https://linkedin.com/in/seu-linkedin)
+Visite meu LinkedIn:(https://www.linkedin.com/in/leandro-toledo88/)
 
 ---
 
