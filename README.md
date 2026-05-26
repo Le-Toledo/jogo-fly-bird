@@ -28,9 +28,7 @@ Sky Bird é um jogo arcade puro em **HTML5, CSS3 e JavaScript vanilla**, sem dep
    cd jogo-fly-bird
    ```
 
-2. Abra no navegador:
-   - **Opção 1:** Clique duplo em `index.html`
-   - **Opção 2:** Use um servidor local (Python, Node, VSCode Live Server, etc.)
+2. Rode com um servidor local:
    ```bash
    # Exemplo com Python 3
    python -m http.server 8000
@@ -54,21 +52,28 @@ Sky Bird é um jogo arcade puro em **HTML5, CSS3 e JavaScript vanilla**, sem dep
 
 ```
 jogo-fly-bird/
-├── index.html          # Estrutura HTML e layout da interface
-├── style.css           # Estilos CSS, responsividade e temas
-├── game.js             # Lógica do jogo e renderização Canvas
-├── README.md           # Este arquivo
-├── LICENSE             # Licença MIT
-└── .gitignore          # Configuração do Git
+├── index.html
+├── src/
+│   ├── js/
+│   │   ├── core/       # Serviços compartilhados, como storage
+│   │   ├── game/       # Estado, regras, colisões, input e loop do jogo
+│   │   ├── rendering/  # Renderização Canvas 2D
+│   │   ├── ui/         # Integração com DOM e HUD
+│   │   └── main.js     # Composição da aplicação
+│   └── styles/
+│       └── main.css    # Estilos, responsividade e temas
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
 
 ## 🛠️ Stack Técnico
 
 - **HTML5:** Semântica, Canvas 2D API, LocalStorage
 - **CSS3:** Grid, Flexbox, animações, gradientes, responsividade mobile-first
-- **JavaScript:** Vanilla JS (ES6+), game loop, gerenciamento de estado
+- **JavaScript:** Vanilla JS com ES Modules, game loop, gerenciamento de estado
 
-**Nenhuma dependência externa** – O projeto roda globalmente em qualquer navegador moderno.
+**Nenhuma dependência de build** – O projeto roda em qualquer navegador moderno usando um servidor estático local ou GitHub Pages.
 
 ## 🎨 Design & UX
 
@@ -99,7 +104,8 @@ O jogo utiliza `requestAnimationFrame()` para atualizar 60 vezes por segundo:
 ## 🐛 Troubleshooting
 
 **O jogo não funciona?**
-- Verifique se o navegador suporta Canvas 2D e ES6
+- Verifique se o navegador suporta Canvas 2D e ES Modules
+- Execute por um servidor local, como `python -m http.server 8000`
 - Limpe o cache do navegador (Ctrl+Shift+Delete)
 - Use um navegador moderno: Chrome, Firefox, Safari ou Edge
 

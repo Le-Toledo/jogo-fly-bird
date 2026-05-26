@@ -1,34 +1,20 @@
-﻿:root {
-  /* Paleta de cores - Tema de céu */
+:root {
   --sky-top: #8ad7ff;
   --sky-middle: #b6efff;
   --sky-bottom: #f7e7a8;
-  
-  /* Tons de texto e elementos */
   --ink: #10324b;
   --ink-soft: #31536d;
-  
-  /* Fundos translúcidos com blur */
   --panel: rgba(11, 32, 49, 0.8);
   --panel-border: rgba(255, 255, 255, 0.18);
   --card: rgba(255, 255, 255, 0.68);
   --card-border: rgba(16, 50, 75, 0.08);
-  
-  /* Tipografia sobre fundo escuro */
   --text-on-dark: #f5fbff;
-  
-  /* Cores de ação e destaque */
   --accent: #ff8d3f;
   --accent-deep: #d96015;
-  
-  /* Sombras para profundidade */
   --shadow-lg: 0 30px 80px rgba(17, 39, 58, 0.22);
   --shadow-md: 0 18px 42px rgba(17, 39, 58, 0.16);
 }
 
-/**
- * Reset e base
- */
 * {
   box-sizing: border-box;
 }
@@ -48,11 +34,6 @@ body {
     linear-gradient(180deg, var(--sky-top), var(--sky-middle) 52%, var(--sky-bottom));
 }
 
-/**
- * Layout principal com CSS Grid
- * 2 colunas: hero content + game canvas
- * Responsivo em mobile (stacked)
- */
 .layout {
   width: min(1120px, calc(100% - 32px));
   min-height: 100vh;
@@ -68,10 +49,6 @@ body {
   padding: 12px 0;
 }
 
-/**
- * Tipografia de rótulos (eyebrow text)
- * Pequenos, uppercase, com letter-spacing para destaque
- */
 .eyebrow,
 .brand-kicker,
 .panel-kicker,
@@ -145,10 +122,6 @@ body {
   position: relative;
 }
 
-/**
- * HUD (Heads-Up Display)
- * Contém marca e placar do jogo
- */
 .hud {
   display: flex;
   justify-content: space-between;
@@ -194,9 +167,6 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-/**
- * Canvas principal de renderização do jogo
- */
 canvas {
   display: block;
   width: 100%;
@@ -204,10 +174,6 @@ canvas {
   background: transparent;
 }
 
-/**
- * Overlay modal para menus e game over
- * Possui transição suave e efeito blur de fundo
- */
 .overlay {
   position: absolute;
   inset: 0;
@@ -244,10 +210,6 @@ canvas {
   line-height: 1.5;
 }
 
-/**
- * Botões com gradiente e efeito de sombra
- * Hover/active animations para feedback tátil
- */
 button {
   border: 0;
   border-radius: 999px;
@@ -279,7 +241,6 @@ button:active {
 }
 
 @media (max-width: 960px) {
-  /* Layout tablet: empilha hero e game na vertical */
   .layout {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -292,7 +253,6 @@ button:active {
 }
 
 @media (max-width: 640px) {
-  /* Layout mobile: ajusta espaçamento e stacking */
   .layout {
     width: min(100% - 20px, 1120px);
   }
